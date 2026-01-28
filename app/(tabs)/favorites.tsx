@@ -5,7 +5,6 @@ import { router, useFocusEffect } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../../context/ThemeContext";
 
-
 export default function Favorites() {
   const [recipes, setRecipes] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
@@ -15,9 +14,7 @@ export default function Favorites() {
   const cardBgColor = isDark ? "bg-neutral-800" : "bg-white";
   const textColor = isDark ? "text-white" : "text-gray-900";
   const secondaryTextColor = isDark ? "text-neutral-400" : "text-gray-600";
-  const iconBgColor = isDark ? "bg-neutral-700" : "bg-gray-200";
-
-  
+  const iconBgColor = isDark ? "bg-neutral-700" : "bg-gray-200";  
   useFocusEffect(
     useCallback(() => {
       loadFavorites();
